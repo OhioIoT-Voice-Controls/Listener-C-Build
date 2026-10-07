@@ -12,13 +12,29 @@ Pull the repo to your laptop:
 git clone https://github.com/OhioIoT-Voice-Controls/Listener-C-Build listener
 cd listener
 ```
+Edit `_build` so that it points to your desired Docker Hub account and container name (defaulted to listener).
+
 Edit the `commands.py'.  It's a list of key/value pairs.  The key is what you "say", and the value is the command that goes out as the mqtt payload.  If you want to change the topic that the messages go out to, change it directly in listener.py.  
 
-When you are done with the edits, edit `./_build` so that it points to your Docker Hub account, and then run it:
+When you are done with the edits, re-build and re-push your Docker container image:
 ```
 ./_build
 ```
-If your running the code on your Raspberry Pi with Watchtower running (see [Listener C](https://github.com/OhioIoT-Voice-Controls/Listener-C)), your updated container image should pull down and run automatically.
+SSH into your local Raspberry Pi, and pull down the repo to install your listener on the Raspberry Pi:
+```
+git clone https://github.com/OhioIoT-Voice-Controls/Listener-C listener
+cd listener
+```
+Edit the docker compose file to point to the same Docker Hub account and container image name that you set in your `./_build` script.  Then, run it:
+```
+docker compose up
+```
+When you see `listening...` in your logs, the system is up.  Try saying some of the commands you defined in your `commands.py`.  I recommend using MQTT Explorer to debug this step.
+
+When you are comfortable that everything is running OK, run your containers in the background:
+```
+docker compose up -d
+```
 
 ## Links
 - [OhioIoT YouTube Channel](https://www.youtube.com/@ohioiot) - Agenda free tutorials showing you how to get started in IoT
