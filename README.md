@@ -2,9 +2,9 @@
 
 ##### [(back to the Voice Controls organization page)](https://github.com/OhioIoT-Voice-Controls)
 
-This is a container implementation for your custom Vosk listener to run on a Raspberry Pi.  
+This is a container implementation for your custom Vosk listener to run on a Raspberry Pi.  It's possible to store your commands in a file on the Raspberry Pi, and edit those commands from time to time (see [Listener B](https://github.com/OhioIoT-Voice-Controls/Listener-B)).  But that's not always convenient, and it depends on a container image that I (Larry) built.  To take control of the container image and make command editing more convenient, you pull down this repo, where you can edit the Python code at your will, in addition to the commands themselves.
 
-You can see this repo in use in the OhioIoT YouTube video [3 Steps To Your Custom Voice Control](https://youtu.be/_ERvoHMBDac).
+This repo was showcased in the OhioIoT YouTube video [3 Steps To Your Custom Voice Control](https://youtu.be/_ERvoHMBDac).
 
 ## Installation
 Pull the repo to your laptop:
@@ -20,7 +20,7 @@ When you are done with the edits, re-build and re-push your Docker container ima
 ```
 ./_build
 ```
-Once your container image has been pushed to Docker Hub, navigate to the [Listener-C](https://github.com/OhioIoT-Voice-Controls/Listener-C) repo to install your listener on your Raspberry Pi:
+Once your container image has been pushed to Docker Hub, navigate to the [Listener-C](https://github.com/OhioIoT-Voice-Controls/Listener-C) repo to install your listener on your Raspberry Pi.
 
 
 ## Links
