@@ -10,6 +10,7 @@ You can see this repo in use in the OhioIoT YouTube video [3 Steps To Your Custo
 Pull the repo to your laptop:
 ```
 git clone https://github.com/OhioIoT-Voice-Controls/Listener-C-Build listener
+cd listener
 ```
 Edit the `commands.py'.  It's a list of key/value pairs.  The key is what you "say", and the value is the command that goes out as the mqtt payload.  If you want to change the topic that the messages go out to, change it directly in listener.py.  
 
