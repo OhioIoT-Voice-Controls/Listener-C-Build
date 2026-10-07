@@ -13,17 +13,12 @@ from vosk import Model, KaldiRecognizer, SetLogLevel
 
 # --- messaging -------------------------------------
 import paho.mqtt.client as mqtt
-MQTT_HOST = "xxx.xxx.xxx.xxx"  # set this to the IP address of your mosquitto broker
+MQTT_HOST = "mosquitto"  # this points to the 'mosquitto' service running in the docker compose file on the Raspberry Pi
 MQTT_PORT = 1883
 MQTT_TOPIC = "voice/command"
 
 ########################
-COMMANDS = {
-    "lights on": "set_lights_on",
-    "lights off": "set_lights_off",
-    "turn the temperature up": "adjust_temp_up",
-    "turn the temperature down": "adjust_temp_down"
-}
+from commands import COMMANDS
 ########################
 
 # --- process lifecycle ----------------------------
