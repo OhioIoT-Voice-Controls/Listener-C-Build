@@ -20,7 +20,7 @@ When you are done with the edits, re-build and re-push your Docker container ima
 ```
 ./_build
 ```
-SSH into your local Raspberry Pi, and pull down the repo to install your listener on the Raspberry Pi:
+SSH into your local Raspberry Pi, and pull down the [Listener-C](https://github.com/OhioIoT-Voice-Controls/Listener-C) repo to install your listener on the Raspberry Pi:
 ```
 git clone https://github.com/OhioIoT-Voice-Controls/Listener-C listener
 cd listener
