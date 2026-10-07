@@ -9,8 +9,8 @@ You can see this repo in use in the OhioIoT YouTube video [3 Steps To Your Custo
 ## Installation
 Pull the repo to your laptop:
 ```
-git clone https://github.com/OhioIoT-Voice-Controls/Listener-C-Build listener_build
-cd listener_build
+git clone https://github.com/OhioIoT-Voice-Controls/Listener-C-Build listener_c_build
+cd listener_c_build
 ```
 Edit `_build` so that it points to your desired Docker Hub account and container name (defaulted to listener_c):
 
@@ -20,26 +20,8 @@ When you are done with the edits, re-build and re-push your Docker container ima
 ```
 ./_build
 ```
-SSH into your local Raspberry Pi, and pull down the [Listener-C](https://github.com/OhioIoT-Voice-Controls/Listener-C) repo to install your listener on the Raspberry Pi:
-```
-git clone https://github.com/OhioIoT-Voice-Controls/Listener-C listener_c
-cd listener_c
-rm README.md
-```
-Edit the docker compose file to point to the same Docker Hub account and container image name that you set in your `./_build` script:
-```
-nano docker-compose.yml
-```
-Then, run it:
-```
-docker compose up
-```
-When you see `listening...` in your logs, the system is up.  Try saying some of the commands you defined in your `commands.py`.  I recommend using MQTT Explorer to debug this step.
+Once your container image has been pushed to Docker Hub, navigate to the [Listener-C](https://github.com/OhioIoT-Voice-Controls/Listener-C) repo to install your listener on your Raspberry Pi:
 
-When you are comfortable that everything is running OK, run your containers in the background:
-```
-docker compose up -d
-```
 
 ## Links
 - [OhioIoT YouTube Channel](https://www.youtube.com/@ohioiot) - Agenda free tutorials showing you how to get started in IoT
