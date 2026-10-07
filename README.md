@@ -28,8 +28,13 @@ SSH into your local Raspberry Pi, and pull down the repo to install your listene
 ```
 git clone https://github.com/OhioIoT-Voice-Controls/Listener-C listener
 cd listener
+rm README.md
 ```
-Edit the docker compose file to point to the same Docker Hub account and container image name that you set in your `./_build` script.  Then, run it:
+Edit the docker compose file to point to the same Docker Hub account and container image name that you set in your `./_build` script:
+```
+nano docker-compose.yml
+```
+Then, run it:
 ```
 docker compose up
 ```
