@@ -15,6 +15,12 @@ cd listener_c_build
 Edit `_build` so that it points to your desired Docker Hub account and container name (defaulted to listener_c):
 
 Edit the `commands.py`.  It's a list of key/value pairs.  The key is what you "say", and the value is the command that goes out as the mqtt payload.  If you want to change the topic that the messages go out to, change it directly in listener.py.  
+```
+      this is what you speak   
+                |        this is the command that goes out
+                |                    |
+     "close the garage door": "garage_close"
+```
 
 When you are done with the edits, re-build and re-push your Docker container image:
 ```
