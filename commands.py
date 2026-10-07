@@ -1,6 +1,6 @@
 
 
-# edit these and then restart the running 'listener' container
+# edit these and then re-build your container image
 
 COMMANDS = {
     "lights on": "set_lights_on",
