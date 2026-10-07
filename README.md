@@ -22,8 +22,8 @@ When you are done with the edits, re-build and re-push your Docker container ima
 ```
 SSH into your local Raspberry Pi, and pull down the [Listener-C](https://github.com/OhioIoT-Voice-Controls/Listener-C) repo to install your listener on the Raspberry Pi:
 ```
-git clone https://github.com/OhioIoT-Voice-Controls/Listener-C listener
-cd listener
+git clone https://github.com/OhioIoT-Voice-Controls/Listener-C listener_c
+cd listener_c
 rm README.md
 ```
 Edit the docker compose file to point to the same Docker Hub account and container image name that you set in your `./_build` script:
