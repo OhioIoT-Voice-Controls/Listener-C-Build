@@ -9,8 +9,8 @@ You can see this repo in use in the OhioIoT YouTube video [3 Steps To Your Custo
 ## Installation
 Pull the repo to your laptop:
 ```
-git clone https://github.com/OhioIoT-Voice-Controls/Listener-C-Build listener
-cd listener
+git clone https://github.com/OhioIoT-Voice-Controls/Listener-C-Build listener_build
+cd listener_build
 ```
 Edit `_build` so that it points to your desired Docker Hub account and container name (defaulted to listener_c):
 
