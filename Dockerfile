@@ -19,5 +19,6 @@ RUN curl -sL -o /tmp/model.zip \
     && rm /tmp/model.zip
 
 COPY listener.py .
+COPY commands.py .
 
 CMD ["python", "-u", "listener.py"]
