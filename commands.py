@@ -1,9 +1,10 @@
 
 
-# edit these and then re-build your container image
+# edit this list to represent your desired commands, 
+# and then re-build your container image
 
 # format:
-#      "the command that you say": "the payload that goes out"
+#      "what you say": "the outgoing payload"
 
 COMMANDS = {
     "lights on": "set_lights_on",
